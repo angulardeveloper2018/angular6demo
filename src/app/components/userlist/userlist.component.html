@@ -1,0 +1,13 @@
+<h1>
+  userlist
+</h1>
+<div class="grid grid-pad">
+	<!-- <input type="text" class="form-control" name="username" [(ngModel)]="username"/> -->
+	<br>
+  <a *ngFor="let user of users; let i = index" class="item col-1-4">
+    <div class="module">
+    	    <a routerLink="/useradd/{{i}}">{{user.username}}</a>
+    	    <a (click)="onDelete(i)">delete</a>
+    </div>
+  </a>
+</div>
